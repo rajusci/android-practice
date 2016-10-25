@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">AndroidPractice</string>
+    <string name="app_name">MyApp</string>
     <string name="action_settings">Settings</string>
+
+    <!-- error open camera -->
+    <string name="err_camera_open"></string>
 </resources>
