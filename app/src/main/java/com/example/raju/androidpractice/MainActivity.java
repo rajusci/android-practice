@@ -10,13 +10,18 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.example.raju.androidpractice.flashlight.FlashLightActivity;
+import com.example.raju.androidpractice.places.FindPlacesActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     // declare flash light
     private Button btnFlashLight;
+
+    // declare find palaces button
+    private Button btnFindPlaces;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         initialize();
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -35,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
     }
 
     /**
@@ -46,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
         // initialize flash light button
         btnFlashLight = (Button)findViewById(R.id.btnFlashLight);
 
+        // initialize find places button
+        btnFindPlaces = (Button)findViewById(R.id.btnFindPlaces);
+
         btnFlashLight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,10 +62,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnFindPlaces.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                showFindPlacesActivity();
+            }
+        });
+
     }
 
     /**
-     * method to show the flash light activity
+     * Method to show the flash light activity
      */
     public void showFlashLightActivity(){
 
@@ -66,6 +82,19 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
         finish();
+    }
+
+    /**
+     * Method to show the find places activity
+     */
+    public void showFindPlacesActivity(){
+
+        Intent intent = new Intent(this, FindPlacesActivity.class);
+
+        startActivity(intent);
+
+        finish();
+
     }
 
     @Override
