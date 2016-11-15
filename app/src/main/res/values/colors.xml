@@ -23,6 +23,14 @@
     <color name="dot_light_screen3">#93c6fd</color>
     <color name="dot_light_screen4">#e4b5fc</color>
 
+    <color name="text_color_white">#FFFFFF</color>
+
+    <color name="dark_color_control_text_color">#FFFFFF</color>
+    <color name="dark_color_control_hint_color">#FFFFFF</color>
+    <color name="dark_color_control_normal">#FFFFFF</color>
+    <color name="dark_color_control_activated">#FFFFFF</color>
+    <color name="dark_color_control_highlight">#FFFFFF</color>
+
     <array name="array_dot_active">
         <item>@color/dot_light_screen1</item>
         <item>@color/dot_light_screen2</item>

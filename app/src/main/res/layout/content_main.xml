@@ -13,6 +13,11 @@
     tools:context="com.example.raju.androidpractice.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layHomeContent"></RelativeLayout>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,5 +30,13 @@
         android:text="Find places"
         android:id="@+id/btnFindPlaces"
         android:layout_below="@+id/btnFlashLight"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alert Dialog"
+        android:id="@+id/btnAlertDialog"
+        android:layout_below="@+id/btnFindPlaces"
         android:layout_alignParentStart="true" />
 </RelativeLayout>
