@@ -36,6 +36,7 @@
             android:marqueeRepeatLimit="marquee_forever"
             android:scrollHorizontally="true"
             android:textColor="#ff4500"
+            android:singleLine="true"
             android:text="this is a very long piece of text that will move" />
 
     </RelativeLayout>
