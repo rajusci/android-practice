@@ -47,6 +47,8 @@ public class FindPlacesActivity extends Activity {
 
     private TextView lblCurrentAddress;
 
+    private String currentLocation = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,10 +91,10 @@ public class FindPlacesActivity extends Activity {
             }
         });
 
-        Animation animationToLeft = new TranslateAnimation(400, -400, 0, 0);
+        /*Animation animationToLeft = new TranslateAnimation(400, -400, 0, 0);
         animationToLeft.setDuration(12000);
         animationToLeft.setRepeatMode(Animation.RESTART);
-        animationToLeft.setRepeatCount(Animation.INFINITE);
+        animationToLeft.setRepeatCount(Animation.INFINITE);*/
 
         /*Animation animationToRight = new TranslateAnimation(-400,400, 0, 0);
         animationToRight.setDuration(12000);
@@ -100,7 +102,9 @@ public class FindPlacesActivity extends Activity {
         animationToRight.setRepeatCount(Animation.INFINITE);*/
 
         lblCurrentAddress = (TextView)findViewById(R.id.lblCurrentAddress);
-        lblCurrentAddress.setAnimation(animationToLeft);
+        lblCurrentAddress.setText(currentLocation);
+        lblCurrentAddress.setSelected(true);
+        //lblCurrentAddress.setAnimation(animationToLeft);
 
     }
 
@@ -186,12 +190,16 @@ public class FindPlacesActivity extends Activity {
                     StringBuilder strReturnedAddress = new StringBuilder("");
 
                     for (int i = 0; i < returnedAddress.getMaxAddressLineIndex(); i++) {
-                        strReturnedAddress.append(returnedAddress.getAddressLine(i)).append("\n");
+                        strReturnedAddress.append(returnedAddress.getAddressLine(i)).append(" ");
+
+                        strAdd = strReturnedAddress.toString();
                     }
-                    strAdd = strReturnedAddress.toString();
+
+                    currentLocation = strReturnedAddress.toString();
+
                     Log.w("My Current loction address", "" + strReturnedAddress.toString());
 
-                    lblCurrentAddress.setText(strReturnedAddress.toString());
+
                 } else {
                     Log.w("My Current loction address", "No Address returned!");
                 }
@@ -208,7 +216,6 @@ public class FindPlacesActivity extends Activity {
             // Ask user to enable GPS/network in settings
             gps.showSettingsAlert();
 
-            return;
         }
 
     }
