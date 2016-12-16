@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@drawable/customersearch_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblFromDate"
+        android:layout_marginTop="20dp"
+        android:text="@string/filter_from_date"
+        android:textColor="@color/text_color_white"
+        android:textSize="@dimen/app_text_view_size"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtFromDate"
+        style="@style/EditTextDarkStyle"
+        android:inputType="date"
+        android:layout_toEndOf="@+id/lblFromDate"
+        android:layout_alignParentEnd="true"
+        android:editable="false"
+        android:focusable="false" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/lblToDate"
+        android:text="@string/filter_to_date"
+        android:textColor="@color/text_color_white"
+        android:textSize="@dimen/app_text_view_size"
+        android:layout_below="@+id/lblFromDate"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtToDate"
+        style="@style/EditTextDarkStyle"
+        android:inputType="date"
+        android:layout_below="@id/lblFromDate"
+        android:layout_toEndOf="@+id/lblFromDate"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Filter"
+        android:id="@+id/btnFilter"
+        android:layout_below="@+id/lblToDate"/>
+
+</RelativeLayout>

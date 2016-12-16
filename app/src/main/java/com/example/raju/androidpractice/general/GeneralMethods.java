@@ -7,6 +7,9 @@ import android.widget.Toast;
 
 import com.example.raju.androidpractice.R;
 
+import java.text.SimpleDateFormat;
+import java.util.Locale;
+
 /**
  * Created by Raju on 10/24/2016.
  */
@@ -62,5 +65,16 @@ public class GeneralMethods {
         // Showing Alert Message
         alertDialog.show();
 
+    }
+
+    /***
+     * Method for getting app date formatter
+     * @return
+     */
+    public SimpleDateFormat getAppDateFormat(){
+
+        SimpleDateFormat dateFormat= new SimpleDateFormat("dd-MMM-yyyy", Locale.US);
+
+        return dateFormat;
     }
 }

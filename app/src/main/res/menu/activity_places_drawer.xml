@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_home" android:icon="@drawable/ic_menu_home"
+            android:title="Home" />
+        <item android:id="@+id/nav_pay_with_points" android:icon="@drawable/ic_menu_pay"
+            android:title="Pay with points" />
+        <item android:id="@+id/nav_my_transactions" android:icon="@drawable/ic_menu_charge_card"
+            android:title="My Transactions" />
+        <item android:id="@+id/nav_logout" android:icon="@drawable/ic_menu_logout"
+            android:title="Logout" />
+    </group>
+
 </menu>

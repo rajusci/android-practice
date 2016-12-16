@@ -4,4 +4,8 @@
 
     <!-- error open camera -->
     <string name="err_camera_open">Camera Error. Failed to Open. Error:</string>
+
+    <!-- filter transaction -->
+    <string name="filter_from_date">From Date</string>
+    <string name="filter_to_date">To Date</string>
 </resources>
