@@ -26,6 +26,7 @@ import com.example.raju.androidpractice.alertdialog.AlertDialogTestFragment;
 import com.example.raju.androidpractice.flashlight.FlashLightActivity;
 import com.example.raju.androidpractice.general.GeneralMethods;
 import com.example.raju.androidpractice.places.FindPlacesActivity;
+import com.example.raju.androidpractice.sqlite.SQLiteContactsActivity;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -43,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
 
     // declare alert dialog
     private Button btnAlertDialog;
+
+    // declare sqlite
+    private Button btnSQLite;
 
     private EditText fromDate;
 
@@ -97,6 +101,9 @@ public class MainActivity extends AppCompatActivity {
         // initialize alert dialog
         btnAlertDialog = (Button)findViewById(R.id.btnAlertDialog);
 
+        // initialize sqlite
+        btnSQLite = (Button)findViewById(R.id.btnSQLite);
+
         btnFlashLight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -125,6 +132,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnSQLite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                showSQLiteContactActivity();
+            }
+        });
+
     }
 
     /**
@@ -150,6 +165,18 @@ public class MainActivity extends AppCompatActivity {
 
         finish();
 
+    }
+
+    /**
+     * Method to show the SQLite activity
+     */
+    public void showSQLiteContactActivity(){
+
+        Intent intent = new Intent(this, SQLiteContactsActivity.class);
+
+        startActivity(intent);
+
+        finish();
     }
 
     public void moveToFragment(){

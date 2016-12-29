@@ -11,6 +11,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 
 import com.android.gps.tracking.GPSTracker;
+import com.example.raju.androidpractice.general.GeneralMethods;
 import com.ui.controller.sliding.DrawerLayoutListener;
 
 import android.util.Log;
@@ -49,6 +50,8 @@ public class FindPlacesActivity extends Activity {
 
     private String currentLocation = "";
 
+    private GeneralMethods generalMethods = new GeneralMethods();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,7 +84,9 @@ public class FindPlacesActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                openNavigationDrawer();
+                generalMethods.showToastMessage(context, "open");
+
+                //openNavigationDrawer();
 
                 /*DrawerLayout drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
 

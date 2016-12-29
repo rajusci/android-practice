@@ -39,4 +39,13 @@
         android:id="@+id/btnAlertDialog"
         android:layout_below="@+id/btnFindPlaces"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SQLite"
+        android:id="@+id/btnSQLite"
+        android:layout_below="@+id/btnAlertDialog"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
